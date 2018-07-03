@@ -4,7 +4,7 @@ public class Park {
 	private String location;
 	private String type;
 	private double square;
-	private String date_of_foundation;
+	private String dateOfFoundation;
 	
 	public String getName() {
 		return name;
@@ -35,61 +35,61 @@ public class Park {
 	}
 	
 	public String getDate() {
-		return date_of_foundation;
+		return dateOfFoundation;
 	}
-	public void setDate(String date_of_foundation) {
-		this.date_of_foundation = date_of_foundation;
+	public void setDate(String dateOfFoundation) {
+		this.dateOfFoundation = dateOfFoundation;
 	}
 	
-	static double sum_square=0;
+	static double sumSquare=0;
 	public Park() {
 		this.name = "Стрийський парк";
 		this.location="м.Львів, Франківський район";
 		this.type = "Громадський парк";
 		this.square = 52.1381;
-		this.date_of_foundation="1876 р";
-		sum_square+=square;
+		this.dateOfFoundation="1876 р";
+		sumSquare+=square;
 	};
 	public Park(String name,String location,String type,double square) {
 		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.square = square;
-		this.date_of_foundation="1855 р";
+		this.dateOfFoundation="1855 р";
 		
-		sum_square+=square;
+		sumSquare+=square;
 	};
-	public Park(String name,String location,String type,double square, String date_of_foundation) {
+	public Park(String name,String location,String type,double square, String dateOfFoundation) {
 		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.square = square;
-		this.date_of_foundation=date_of_foundation;
+		this.dateOfFoundation=dateOfFoundation;
 		
-		sum_square+=square;
+		sumSquare+=square;
 	};
 	public static void PrintStaticSum() {
-		System.out.println("Сумарна площа парків: " + sum_square +" га\n");
+		System.out.println("Сумарна площа парків: " + sumSquare +" га\n");
 	}
 	public static void PrintSum() {
-		System.out.println("Сумарна площа парків: " + sum_square +" га\n");
+		System.out.println("Сумарна площа парків: " + sumSquare +" га\n");
 	}
-	public void resetValues(String name,String location,String type,double square, String date_of_foundation) {
+	public void resetValues(String name,String location,String type,double square, String dateOfFoundation) {
 		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.square = square;
-		this.date_of_foundation=date_of_foundation;
+		this.dateOfFoundation=dateOfFoundation;
 		}
 	public String toString() {
-		return "Назва парку: " + name  +"\n"+"Місцезнаходження: " + location +"\n"+"Тип: " + type +"\n"+"Площа: " + square+" га" +"\n"+"Дата заснування: " + date_of_foundation +"\n";	
+		return "Назва парку: " + name  +"\n"+"Місцезнаходження: " + location +"\n"+"Тип: " + type +"\n"+"Площа: " + square+" га" +"\n"+"Дата заснування: " + dateOfFoundation +"\n";	
 	}
 	public static void main(String[] args) { 
-		Park Stryskyy= new Park();
+		Park stryskyy= new Park();
 		System.out.println(Stryskyy.toString());
-		Park Franka= new Park("Парк ім. Івана Франка","м.Львів, Галицький район","Громадський парк",10.5140);
+		Park franka= new Park("Парк ім. Івана Франка","м.Львів, Галицький район","Громадський парк",10.5140);
 		System.out.println(Franka.toString());
-		Park Zamok= new Park("Парк Високий замок","м.Львів, Личаківський район","Громадський парк",36.2,"1835 р");
+		Park zamok= new Park("Парк Високий замок","м.Львів, Личаківський район","Громадський парк",36.2,"1835 р");
 		System.out.println(Zamok.toString());
 		Park.PrintStaticSum();
 		Park.PrintSum();
